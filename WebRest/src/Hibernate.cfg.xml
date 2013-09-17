@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+
+		<property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.query.factory_class">org.hibernate.hql.classic.ClassicQueryTranslatorFactory</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/restDB</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">diego</property>
+
+		<property name="current_session_context_class">thread</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+		<mapping class="br.com.fiap.fiaproupasdelivery.entities.Cliente" />
+		<mapping class="br.com.fiap.fiaproupasdelivery.entities.Entregador" />
+		<mapping class="br.com.fiap.fiaproupasdelivery.entities.Produto" />
+		<mapping class="br.com.fiap.fiaproupasdelivery.entities.Motivo" />
+		<mapping class="br.com.fiap.fiaproupasdelivery.entities.Entrega" />
+	</session-factory>
+</hibernate-configuration>
